@@ -8,7 +8,7 @@ tar xvf asterisk-18-current.tar.gz
 file=$(ls  | grep asterisk.* | grep -v '.tar.gz')
 cd $file
 
-./config --with-jansson-bundled'
+./config --with-jansson-bundled
 
 make
 
