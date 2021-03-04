@@ -84,13 +84,16 @@ sed '/^$/d' sip.conf
 #add qualify=yes to genral cintext
 sed -i '9iqualify=yes' sip.conf
 
+cp extensions.conf extensions.conf.copy
+echo '' > extensions.conf
+
+
 $automation_file/creat_sip_user.sh user1 password2 alias1
 $automation_file./creat_sip_user.sh user2 password2 alais2
 
 
 
-cp extensions.conf extensions.conf.copy
-echo '' > extensions.conf
+
 
 # cat <<EOF>> test
 
@@ -102,8 +105,7 @@ echo '' > extensions.conf
 
 # EOF
 
-cp extensions.conf extensions.conf.copy
-echo '' > extensions.conf
+
 
 #done in create user
 # cat <<EOF>> test
