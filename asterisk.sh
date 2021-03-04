@@ -23,7 +23,7 @@ cd ~/asterisk-18.2.1/contrib/init.d
 
 cp rc.debian.asterisk /etc/init.d/asterisk
 
-BFILE=$(type asterisk)
+BFILE=$(type asterisk | awk '{ print $3 }' )
 sed -i "s|__ASTERISK_SBIN_DIR__\/asterisk|$BFILE|g" /etc/init.d/asterisk
 
 sed -i "s/__ASTERISK_VARRUN_DIR__/\/var\/lib\/asterisk/g" /etc/init.d/asterisk
