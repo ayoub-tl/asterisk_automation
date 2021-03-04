@@ -33,7 +33,7 @@ sed -i "s/__ASTERISK_ETC_DIR__/\/etc\/asterisk/g" /etc/init.d/asterisk
 useradd -d /var/lib/asterisk  asterisk
 chown -R asterisk  /var/spool/asterisk /var/lib/asterisk /var/run/asterisk
 
-cd ~/asterisk-18-current/contrib/init.d/
+cd ~/$file/contrib/init.d/
 
 
 cp etc_default_asterisk /etc/defualt/asterisk
