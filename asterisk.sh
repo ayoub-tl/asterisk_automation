@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+automation_file=$(pwd)
 apt update
 add-apt-repository universe
 apt -y install git curl wget libnewt-dev libedit-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
@@ -67,10 +68,8 @@ sed -i '/option     dns/d' /etc/udhcpd.conf
 sed -i '/option     wins/d' /etc/udhcpd.conf
 
 
-apt install ntp -y server
+apt install -y ntp 
 
-install ntp -y server
-install ntp -y server
 /etc/init.d/ntp start 
 
 
@@ -84,8 +83,8 @@ sed '/^[[:space:]]*$/d' sip.conf
 #add qualify=yes to genral cintext
 sed -i '9iqualify=yes' sip.conf
 
-./creat_sip_user.sh user1 password2 alias1
-./creat_sip_user.sh user2 password2 alais2
+$automation_file/creat_sip_user.sh user1 password2 alias1
+$automation_file./creat_sip_user.sh user2 password2 alais2
 
 
 
