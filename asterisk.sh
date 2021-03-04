@@ -5,8 +5,9 @@ apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion l
 cd ~
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
 tar xvf asterisk-18-current.tar.gz
-file= ls ~ | grep asterisk.* | grep -v '.tar.gz'
+file= ls  | grep asterisk.* | grep -v '.tar.gz'
 cd $file
+
 ./config
 
 make
