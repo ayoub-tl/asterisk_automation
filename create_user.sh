@@ -17,7 +17,6 @@ EOT
 
 if grep -q phones  /etc/asterisk/extensions.conf; then
 cat <<EOT >> /etc/asterisk/extensions.conf
-[phones]
  exten =>$3,1,NoOp('first dial')
  same => n,Dial(SIP/$1)
  same => n,Hangup
@@ -26,6 +25,7 @@ EOT
 
 else
    cat <<EOT >> /etc/asterisk/extensions.conf
+[phones]
  exten =>$3,1,NoOp('first dial')
  same => n,Dial(SIP/$1)
  same => n,Hangup
