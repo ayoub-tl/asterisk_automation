@@ -88,8 +88,8 @@ cp extensions.conf extensions.conf.copy
 echo '' > extensions.conf
 
 
-$automation_file/creat_sip_user.sh user1 password2 alias1
-$automation_file./creat_sip_user.sh user2 password2 alais2
+$automation_file/create_sip_user.sh user1 password2 alias1
+$automation_file./create_sip_user.sh user2 password2 alais2
 
 
 
