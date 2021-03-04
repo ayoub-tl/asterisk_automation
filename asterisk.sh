@@ -78,9 +78,9 @@ cd /etc/asterisk
 cp sip.conf sip.conf.org
 
 #remove comment 
-sed -i '/^ *;/d' sip.conf
+sed -i '/^[[:space:]]*;/d' sip.conf
 #remove emplty line 
-sed -i '/^$/d' test
+sed '/^[[:space:]]*$/d' sip.conf
 #add qualify=yes to genral cintext
 sed -i '9iqualify=yes' sip.conf
 
