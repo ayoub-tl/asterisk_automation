@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 apt update
 add-apt-repository universe
-sudo apt -y install git curl wget libnewt-dev libssl-dev libncurses5>
+apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
 cd ~
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-1>
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
 tar xvf asterisk-18-current.tar.gz
 
 ./config
