@@ -114,4 +114,5 @@ echo '' > extensions.conf
 # EOF
 
 /etc/init.d/asterisk stop
+/etc/init.d/asterisk reload
 /etc/init.d/asterisk start
