@@ -4,6 +4,7 @@ add-apt-repository universe
 apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
 cd ~
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
+file= ls ~ | grep asterisk.* | grep -v '.tar.gz'
 tar xvf asterisk-18-current.tar.gz
 
 ./config
