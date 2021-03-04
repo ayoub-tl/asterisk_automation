@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 apt update
 add-apt-repository universe
-apt -y install git curl wget libnewt-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
+apt -y install git curl wget libnewt-dev libedit-dev libssl-dev libncurses5-dev subversion libsqlite3-dev build-essential libjansson-dev libxml2-dev  uuid-dev
 cd ~
 wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-18-current.tar.gz
 tar xvf asterisk-18-current.tar.gz
-file= ls  | grep asterisk.* | grep -v '.tar.gz'
+file=$(ls  | grep asterisk.* | grep -v '.tar.gz')
 cd $file
 
-./config
+./config --with-jansson-bundled'
 
 make
 
