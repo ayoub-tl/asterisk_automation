@@ -57,11 +57,11 @@ sed -i "s/DHCP_ENABLED=\"no\"/DHCP_ENABLED=\"yes\"/g"
 
 #vi /etc/udhcpd.conf =>range
 #*****
-sed 's/.*start.*/start       192.168.1.40 /g' /etc/udhcpd.conf
-sed 's/.*start.*/start       192.168.1.49 /g' /etc/udhcpd.conf
+sed -i 's/.*start.*/start       192.168.1.40 /g' /etc/udhcpd.conf
+sed -i 's/.*start.*/start       192.168.1.49 /g' /etc/udhcpd.conf
 #**dns
-sed 's/opt  dns.*/opt   dns     8.8.8.8/g' /etc/udhcpd.conf
-sed 's/opt  router.*/opt   router     192.168.1.1/g' /etc/udhcpd.conf
+sed -i 's/opt  dns.*/opt   dns     8.8.8.8/g' /etc/udhcpd.conf
+sed -i 's/opt  router.*/opt   router     192.168.1.1/g' /etc/udhcpd.conf
 sed -i '/option     dns/d' /etc/udhcpd.conf
 sed -i '/option     wins/d' /etc/udhcpd.conf
 
@@ -81,7 +81,7 @@ sed -i '/^ *;/d' sip.conf
 #remove emplty line 
 sed -i '/^$/d' test
 #add qualify=yes to genral cintext
-sed '9iqualify=yes' sip.conf
+sed -i '9iqualify=yes' sip.conf
 
 ./creat_sip_user.sh user1 password2 alias1
 ./creat_sip_user.sh user2 password2 alais2
