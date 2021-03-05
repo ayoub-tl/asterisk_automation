@@ -1,0 +1,25 @@
+--- 
+- 
+  hosts: all
+  name: ansible
+  
+  tasks: 
+    - name: install git 
+      become: true
+      apt:
+        name: git
+        state: latest
+
+    - name: Clone a public git repository
+      git:
+        repo: 'https://github.com/ayoub-tl/asterisk_automation.git'
+        dest: ~
+    
+    - name: add permission to files 
+      shell: chmod 777 ~/asterisk_automation/*
+    
+    - name: execute vagrant file
+      shell: chdir=~asterisk_automation vagrant up
+
+    
+ 
