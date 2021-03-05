@@ -76,8 +76,8 @@ cp extensions.conf extensions.conf.copy
 echo '' > extensions.conf
 
 #create user and alias aka extension
-$automation_file/create_sip_user.sh user1 password2 alias1
-$automation_file./create_sip_user.sh user2 password2 alais2
+$automation_file/create_user.sh user1 password2 alias1
+$automation_file./create_user.sh user2 password2 alais2
 
 
 
