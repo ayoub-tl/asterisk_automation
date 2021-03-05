@@ -42,7 +42,7 @@ update-rc.d asterisk defaults
 
 
 #install dhcp
-apt get install dhcpd
+apt install dhcpd
 
 sed -i "s/DHCP_ENABLED=\"no\"/DHCP_ENABLED=\"yes\"/g"
 
