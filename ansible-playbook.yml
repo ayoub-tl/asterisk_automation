@@ -9,6 +9,12 @@
       apt:
         name: git
         state: latest
+        
+    - name: install virtualbox 
+      become: true
+      apt:
+        name: virtualbox
+        state: latest    
 
     - name: Clone a public git repository
       git:
