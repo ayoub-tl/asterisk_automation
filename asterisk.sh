@@ -44,11 +44,11 @@ update-rc.d asterisk defaults
 #install dhcp
 apt install dhcpd
 
-sed -i "s/DHCP_ENABLED=\"no\"/DHCP_ENABLED=\"yes\"/g" /etc/default/udhcpd
+sed -i "s/DHCPD_ENABLED=\"no\"/DHCPD_ENABLED=\"yes\"/g" /etc/default/udhcpd
 
 
 sed -i 's/.*start.*/start       192.168.1.40 /g' /etc/udhcpd.conf
-sed -i 's/.*start.*/start       192.168.1.49 /g' /etc/udhcpd.conf
+sed -i 's/.*end.*/end       192.168.1.49 /g' /etc/udhcpd.conf
 #configure dns & getway
 sed -i 's/opt  dns.*/opt   dns     8.8.8.8/g' /etc/udhcpd.conf
 sed -i 's/opt  router.*/opt   router     192.168.1.1/g' /etc/udhcpd.conf
