@@ -66,8 +66,8 @@ cp sip.conf sip.conf.org
 #remove comment 
 sed -i '/^[[:space:]]*;/d' sip.conf
 #remove emplty line 
-sed '/^[[:space:]]*$/d' sip.conf
-sed '/^$/d' sip.conf
+sed -i '/^[[:space:]]*$/d' sip.conf
+sed -i '/^$/d' sip.conf
 #add qualify=yes to genral cintext
 sed -i '9iqualify=yes' sip.conf
 
