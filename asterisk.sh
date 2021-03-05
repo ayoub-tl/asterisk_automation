@@ -44,7 +44,7 @@ update-rc.d asterisk defaults
 #install dhcp
 apt install dhcpd
 
-sed -i "s/DHCP_ENABLED=\"no\"/DHCP_ENABLED=\"yes\"/g"
+sed -i "s/DHCP_ENABLED=\"no\"/DHCP_ENABLED=\"yes\"/g" /etc/default/udhcpd
 
 
 sed -i 's/.*start.*/start       192.168.1.40 /g' /etc/udhcpd.conf
