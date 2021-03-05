@@ -26,6 +26,8 @@
     
     - name: execute vagrant file
       shell: chdir=~asterisk_automation vagrant up
-
-    
+      
+    #- name: install asterisk server
+    #  become: true
+     # shell: chdir=~asterisk_automation ./asterisk.sh    
  
