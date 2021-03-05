@@ -50,10 +50,10 @@ sed -i "s/DHCPD_ENABLED=\"no\"/DHCPD_ENABLED=\"yes\"/g" /etc/default/udhcpd
 sed -i 's/.*start.*/start       192.168.1.40 /g' /etc/udhcpd.conf
 sed -i 's/.*end.*/end       192.168.1.49 /g' /etc/udhcpd.conf
 #configure dns & getway
-sed -i 's/opt  dns.*/opt   dns     8.8.8.8/g' /etc/udhcpd.conf
-sed -i 's/opt  router.*/opt   router     192.168.1.1/g' /etc/udhcpd.conf
-sed -i '/option     dns/d' /etc/udhcpd.conf
-sed -i '/option     wins/d' /etc/udhcpd.conf
+sed -i 's/opt[[:space:]]*dns.*/opt   dns     8.8.8.8/g' /etc/udhcpd.conf
+sed -i 's/opt[[:space:]]*router.*/opt   router     192.168.1.1/g' /etc/udhcpd.conf
+sed -i '/option[[:space:]]*dns/d' /etc/udhcpd.conf
+sed -i '/option[[:space:]]*wins/d' /etc/udhcpd.conf
 
 #instlall ntp
 apt install -y ntp 
