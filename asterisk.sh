@@ -19,7 +19,7 @@ make install
 make samples
 make config
 
-cd ~/asterisk-18.2.1/contrib/init.d
+cd ~/$file/contrib/init.d
 #creat a inint.d/asterisk file to launch the service
 cp rc.debian.asterisk /etc/init.d/asterisk
 #REPLACE THE PLACEHOLDER IN THE CONFIG
@@ -33,7 +33,7 @@ chown -R asterisk  /var/spool/asterisk /var/lib/asterisk /var/run/asterisk
 
 
 cd ~/$file/contrib/init.d/
-cp etc_default_asterisk /etc/defualt/asterisk
+cp etc_default_asterisk /etc/default/asterisk
 #uncmommnet the user field
 sed -i "s/;AST_USER/AST_USER/g" /etc/default/asterisk
 sed -i "s/;AST_GROUP/AST_USER/g" /etc/default/asterisk
@@ -42,7 +42,7 @@ update-rc.d asterisk defaults
 
 
 #install dhcp
-apt install dhcpd
+apt install -y dhcpd
 
 sed -i "s/DHCPD_ENABLED=\"no\"/DHCPD_ENABLED=\"yes\"/g" /etc/default/udhcpd
 
